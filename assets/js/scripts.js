@@ -23,7 +23,8 @@ async function getData() {
 				})
 				.join('');
 			//console.log(dataToHtml);
-			document.querySelector('#data').innerHTML = dataToHtml;
+			// document.querySelector('#data').innerHTML = dataToHtml;
+			document.querySelector('#data').insertAdjacentHTML('beforeend', dataToHtml);
 		})
 		.catch((error) => {
 			console.error('Error:', error);
