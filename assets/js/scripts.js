@@ -13,12 +13,12 @@ async function getData() {
 			const dataToHtml = data
 				.map((client) => {
 					return `
-					<p class="container__client">
+					<li class="container__client">
 						<strong>Name:</strong> ${client.name}, 
 						<strong>Country:</strong> ${client.country}, 
 						<strong>Industry:</strong> ${client.industry}, 
 						<strong>Number of Employees:</strong> ${client.numberOfEmployees}
-					</p>
+					</li>
 					`;
 				})
 				.join('');
