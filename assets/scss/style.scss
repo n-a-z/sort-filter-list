@@ -1,7 +1,32 @@
+// Globals
+$color-one: #f1f1f1;
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
+
+.container {
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__col {
+    flex: 0 0 100%;
+  
+    @media (min-width: 768px) {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__client {
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: $color-one;
+  }
+}
+
