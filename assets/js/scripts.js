@@ -14,10 +14,12 @@ async function getData() {
 				.map((client) => {
 					return `
 					<li class="container__client">
-						<strong>Name:</strong> ${client.name}, 
-						<strong>Country:</strong> ${client.country}, 
-						<strong>Industry:</strong> ${client.industry}, 
-						<strong>Number of Employees:</strong> ${client.numberOfEmployees}
+						<ul class="container__client-data">
+							<li class="container_client-name"><strong>Name:</strong> ${client.name}</li>
+							<li class="container_client-country"><strong>Country:</strong> ${client.country}</li>
+							<li class="container_client-industry"><strong>Industry:</strong> ${client.industry}</li>
+							<li class="container_client-employees"><strong>Number of Employees:</strong> ${client.numberOfEmployees}</li>
+						</ul>
 					</li>
 					`;
 				})
