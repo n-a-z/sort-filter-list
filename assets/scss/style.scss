@@ -63,7 +63,8 @@ $transition: all 1s;
 		}
 
 		&--active {
-			display: none;
+			background-position: 0 100%;
+			color: $font-color-one !important;
 		}
 
 		&--one {

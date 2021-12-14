@@ -71,7 +71,8 @@
 }
 
 .sort__btn--active {
-  display: none;
+  background-position: 0 100%;
+  color: #fff !important;
 }
 
 .sort__btn--one {
