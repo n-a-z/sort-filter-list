@@ -30,6 +30,11 @@
   }
 }
 
+.sort {
+  margin-top: 1em;
+  text-align: center;
+}
+
 .sort__group {
   margin-bottom: 1em;
 }
@@ -66,8 +71,7 @@
 }
 
 .sort__btn--active {
-  background-position: 0 100%;
-  color: #fff !important;
+  display: none;
 }
 
 .sort__btn--one {
