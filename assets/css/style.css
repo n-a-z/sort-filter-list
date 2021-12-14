@@ -87,11 +87,32 @@
   color: #fff;
 }
 
+.list {
+  width: 100%;
+}
+
 .list__row:nth-of-type(even) {
   background-color: #f1f1f1;
 }
 
+.list__heading {
+  font-size: 0.8em;
+}
+
+@media (min-width: 768px) {
+  .list__heading {
+    font-size: 1em;
+  }
+}
+
 .list__cell {
   padding: 0.5em 0 0.5em 0;
+  font-size: 0.8em;
+}
+
+@media (min-width: 768px) {
+  .list__cell {
+    font-size: 1em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
