@@ -8,8 +8,6 @@ async function getData() {
 			return response.json();
 		})
 		.then((data) => {
-			//console.log(data);
-
 			const dataToHtml = data
 				.map((client) => {
 					return `
@@ -22,8 +20,7 @@ async function getData() {
 					`;
 				})
 				.join('');
-			//console.log(dataToHtml);
-			// document.querySelector('#data').innerHTML = dataToHtml;
+
 			document
 				.querySelector('#data')
 				.insertAdjacentHTML('beforeend', dataToHtml);

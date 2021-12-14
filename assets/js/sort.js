@@ -4,11 +4,11 @@ let sortEmpAsc = document.getElementById('sortEmpAsc');
 let sortEmpDesc = document.getElementById('sortEmpDesc');
 
 sortNameAsc.addEventListener('click', sortTableName);
-sortNameDesc.addEventListener('click', sortTableNameDesc);
+sortNameDesc.addEventListener('click', sortTableName);
 sortEmpAsc.addEventListener('click', sortTableEmp);
-sortEmpDesc.addEventListener('click', sortTableEmpDesc);
+sortEmpDesc.addEventListener('click', sortTableEmp);
 
-function sortTableName() {
+function sortTableName(event) {
 	let table, rows, switching, i, x, y, shouldSwitch;
 	table = document.getElementById('data');
 	switching = true;
@@ -18,12 +18,19 @@ function sortTableName() {
 		rows = table.rows;
 		for (i = 1; i < rows.length - 1; i++) {
 			shouldSwitch = false;
-			x = rows[i].getElementsByTagName('TD')[0];
-			y = rows[i + 1].getElementsByTagName('TD')[0];
+			x = rows[i].getElementsByTagName('td')[0];
+			y = rows[i + 1].getElementsByTagName('td')[0];
 
-			if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-				shouldSwitch = true;
-				break;
+			if (event.target.innerHTML === 'Asc') {
+				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;
+					break;
+				}
+			} else if (event.target.innerHTML === 'Desc') {
+				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;
+					break;
+				}
 			}
 		}
 		if (shouldSwitch) {
@@ -33,32 +40,7 @@ function sortTableName() {
 	}
 }
 
-function sortTableNameDesc() {
-	let table, rows, switching, i, x, y, shouldSwitch;
-	table = document.getElementById('data');
-	switching = true;
-
-	while (switching) {
-		switching = false;
-		rows = table.rows;
-		for (i = 1; i < rows.length - 1; i++) {
-			shouldSwitch = false;
-			x = rows[i].getElementsByTagName('TD')[0];
-			y = rows[i + 1].getElementsByTagName('TD')[0];
-
-			if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-				shouldSwitch = true;
-				break;
-			}
-		}
-		if (shouldSwitch) {
-			rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-			switching = true;
-		}
-	}
-}
-
-function sortTableEmp() {
+function sortTableEmp(event) {
 	let table, rows, switching, i, x, y, shouldSwitch;
 	table = document.getElementById('data');
 	switching = true;
@@ -69,38 +51,19 @@ function sortTableEmp() {
 
 		for (i = 1; i < rows.length - 1; i++) {
 			shouldSwitch = false;
-			x = rows[i].getElementsByTagName('TD')[3];
-			y = rows[i + 1].getElementsByTagName('TD')[3];
+			x = rows[i].getElementsByTagName('td')[3];
+			y = rows[i + 1].getElementsByTagName('td')[3];
 
-			if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-				shouldSwitch = true;
-				break;
-			}
-		}
-		if (shouldSwitch) {
-			rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-			switching = true;
-		}
-	}
-}
-
-function sortTableEmpDesc() {
-	let table, rows, switching, i, x, y, shouldSwitch;
-	table = document.getElementById('data');
-	switching = true;
-
-	while (switching) {
-		switching = false;
-		rows = table.rows;
-
-		for (i = 1; i < rows.length - 1; i++) {
-			shouldSwitch = false;
-			x = rows[i].getElementsByTagName('TD')[3];
-			y = rows[i + 1].getElementsByTagName('TD')[3];
-
-			if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-				shouldSwitch = true;
-				break;
+			if (event.target.innerHTML === 'Asc') {
+				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;
+					break;
+				}
+			} else if (event.target.innerHTML === 'Desc') {
+				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;
+					break;
+				}
 			}
 		}
 		if (shouldSwitch) {
