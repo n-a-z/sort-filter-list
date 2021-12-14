@@ -11,6 +11,7 @@ $transition: all 1s;
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: sans-serif;
 }
 
 .container {
@@ -27,24 +28,19 @@ $transition: all 1s;
 	}
 }
 
-.list {
-	&__row {
-		&:nth-of-type(even) {
-			background-color: $color-one;
-		}
+.sort {
+	&__group {
+		margin-bottom: 1em;
 	}
-}
-
-.filter {
+	&__heading {
+		font-size: 1em;
+	}
 	&__input {
 		padding: 8px;
 	}
-}
-.sort {
 	&__btn {
 		display: inline-block;
 		min-width: 80px;
-		margin: 24px auto 0 auto;
 		padding: 8px;
 		border-radius: 5px;
 		font-size: 16px;
@@ -86,5 +82,16 @@ $transition: all 1s;
 				color: $font-color-one;
 			}
 		}
+	}
+}
+
+.list {
+	&__row {
+		&:nth-of-type(even) {
+			background-color: $color-one;
+		}
+	}
+	&__cell {
+		padding: 0.5em 0 0.5em 0;
 	}
 }

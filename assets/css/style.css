@@ -5,6 +5,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 
 .container__row {
@@ -29,18 +30,21 @@
   }
 }
 
-.list__row:nth-of-type(even) {
-  background-color: #f1f1f1;
+.sort__group {
+  margin-bottom: 1em;
 }
 
-.filter__input {
+.sort__heading {
+  font-size: 1em;
+}
+
+.sort__input {
   padding: 8px;
 }
 
 .sort__btn {
   display: inline-block;
   min-width: 80px;
-  margin: 24px auto 0 auto;
   padding: 8px;
   border-radius: 5px;
   font-size: 16px;
@@ -81,5 +85,13 @@
 
 .sort__btn--two:hover {
   color: #fff;
+}
+
+.list__row:nth-of-type(even) {
+  background-color: #f1f1f1;
+}
+
+.list__cell {
+  padding: 0.5em 0 0.5em 0;
 }
 /*# sourceMappingURL=style.css.map */
