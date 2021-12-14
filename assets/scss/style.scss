@@ -1,5 +1,9 @@
 // Globals
 $color-one: #f1f1f1;
+$color-two: #0097e6;
+$color-three: #ff5252;
+$font-color-one: #fff;
+$transition: all 1s;
 
 *,
 *::before,
@@ -21,11 +25,65 @@ $color-one: #f1f1f1;
 			flex: 0 0 50%;
 		}
 	}
+}
 
-	.list {
-		&__row {
-			&:nth-of-type(even) {
-				background-color: $color-one;
+.list {
+	&__row {
+		&:nth-of-type(even) {
+			background-color: $color-one;
+		}
+	}
+}
+
+.filter {
+	&__input {
+		padding: 8px;
+	}
+}
+.sort {
+	&__btn {
+		display: inline-block;
+		min-width: 80px;
+		margin: 24px auto 0 auto;
+		padding: 8px;
+		border-radius: 5px;
+		font-size: 16px;
+		text-align: center;
+		text-decoration: none;
+		cursor: pointer;
+		border-width: 2px;
+		border-style: solid;
+		background-color: inherit;
+		background-position: 100% 0;
+		background-size: 300%;
+		transition: $transition;
+
+		&:hover {
+			background-position: 0 100%;
+			color: $font-color-one;
+		}
+
+		&--one {
+			border-color: $color-two;
+			color: $color-two;
+			background-image: linear-gradient(90deg, $color-two 50%, transparent 50%);
+
+			&:hover {
+				color: $font-color-one;
+			}
+		}
+
+		&--two {
+			border-color: $color-three;
+			color: $color-three;
+			background-image: linear-gradient(
+				90deg,
+				$color-three 50%,
+				transparent 50%
+			);
+
+			&:hover {
+				color: $font-color-one;
 			}
 		}
 	}

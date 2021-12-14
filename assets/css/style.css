@@ -29,7 +29,57 @@
   }
 }
 
-.container .list__row:nth-of-type(even) {
+.list__row:nth-of-type(even) {
   background-color: #f1f1f1;
+}
+
+.filter__input {
+  padding: 8px;
+}
+
+.sort__btn {
+  display: inline-block;
+  min-width: 80px;
+  margin: 24px auto 0 auto;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  background-color: inherit;
+  background-position: 100% 0;
+  background-size: 300%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.sort__btn:hover {
+  background-position: 0 100%;
+  color: #fff;
+}
+
+.sort__btn--one {
+  border-color: #0097e6;
+  color: #0097e6;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #0097e6), color-stop(50%, transparent));
+  background-image: linear-gradient(90deg, #0097e6 50%, transparent 50%);
+}
+
+.sort__btn--one:hover {
+  color: #fff;
+}
+
+.sort__btn--two {
+  border-color: #ff5252;
+  color: #ff5252;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #ff5252), color-stop(50%, transparent));
+  background-image: linear-gradient(90deg, #ff5252 50%, transparent 50%);
+}
+
+.sort__btn--two:hover {
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
