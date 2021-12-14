@@ -12,9 +12,19 @@
 <body>
     <div class="container">
         <div class="container__row">
-            <div class="container__col">Filters
-                <input class="container__input" id="filterCountry" placeholder="Filter Countries">
-                <input class="container__input" id="filterIndustry" placeholder="Filter Industries">
+            <div class="container__col">
+                <div class="container__filters">Filters
+                    <input class="container__input" id="filterCountry" placeholder="Filter Countries">
+                    <input class="container__input" id="filterIndustry" placeholder="Filter Industries">
+                </div>
+                <div class="container__filters">Sort by Name
+                    <button class="container_sort" id="sortNameAsc">Asc</button>
+                    <button class="container_sort" id="sortNameDesc">Desc</button>
+                </div>
+                <div class="container__filters">Sort by No. of Employees
+                    <button class="container_sort" id="sortEmpAsc">Asc</button>
+                    <button class="container_sort" id="sortEmpDesc">Desc</button>
+                </div>
             </div>
             <div class="container__col">Data:
                 <ol class="container__list" id="data"></ol>
@@ -23,6 +33,7 @@
     </div>
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/filter.js"></script>
+    <script src="assets/js/sort.js"></script>
 </body>
 
 </html>
