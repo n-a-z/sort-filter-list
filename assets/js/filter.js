@@ -1,42 +1,35 @@
 let filterCountry = document.getElementById('filterCountry');
 let filterIndustry = document.getElementById('filterIndustry');
-//console.log(filterCountry);
-filterCountry.addEventListener('keyup', filterCountries);
-filterIndustry.addEventListener('keyup', filterIndustries);
 
-function filterCountries() {
-	let filterValue = document.getElementById('filterCountry').value.toLowerCase();
-	//console.log(filterValue);
+filterCountry.addEventListener('keyup', filterDouble);
+filterIndustry.addEventListener('keyup', filterDouble);
 
-	let clientsList = document.getElementById('data');
-	let clientsUL = clientsList.querySelectorAll('ul.container__client-data');
-	let clientsULContainer = clientsList.querySelectorAll('li.container__client');
-	let clientsLi = clientsList.querySelectorAll('li.container_client-country');
-
-	for (let i = 0; i < clientsLi.length; i++) {
-		let span = clientsLi[i].getElementsByTagName('span')[0];
-		//console.log(span);
-		if (span.innerHTML.toLowerCase().indexOf(filterValue) > -1) {
-			clientsULContainer[i].style.display = '';
-		} else {
-			clientsULContainer[i].style.display = 'none';
-		}
-	}
-}
-
-function filterIndustries() {
-	let filterValue = document.getElementById('filterIndustry').value.toLowerCase();
-	//console.log(filterValue);
+function filterDouble() {
+	let filterValueCountry = document
+		.getElementById('filterCountry')
+		.value.toLowerCase();
+	let filterValueIndustry = document
+		.getElementById('filterIndustry')
+		.value.toLowerCase();
 
 	let clientsList = document.getElementById('data');
 	let clientsUL = clientsList.querySelectorAll('ul.container__client-data');
 	let clientsULContainer = clientsList.querySelectorAll('li.container__client');
-	let clientsLi = clientsList.querySelectorAll('li.container_client-industry');
+	let clientsLiCountry = clientsList.querySelectorAll(
+		'li.container_client-country'
+	);
+	let clientsLiIndustry = clientsList.querySelectorAll(
+		'li.container_client-industry'
+	);
 
-	for (let i = 0; i < clientsLi.length; i++) {
-		let span = clientsLi[i].getElementsByTagName('span')[0];
-		//console.log(span);
-		if (span.innerHTML.toLowerCase().indexOf(filterValue) > -1) {
+	for (let i = 0; i < clientsUL.length; i++) {
+		let spanCountry = clientsLiCountry[i].getElementsByTagName('span')[0];
+		let spanIndustry = clientsLiIndustry[i].getElementsByTagName('span')[0];
+
+		if (
+			spanCountry.innerHTML.toLowerCase().indexOf(filterValueCountry) > -1 &&
+			spanIndustry.innerHTML.toLowerCase().indexOf(filterValueIndustry) > -1
+		) {
 			clientsULContainer[i].style.display = '';
 		} else {
 			clientsULContainer[i].style.display = 'none';
