@@ -65,6 +65,11 @@
   color: #fff;
 }
 
+.sort__btn--active {
+  background-position: 0 100%;
+  color: #fff !important;
+}
+
 .sort__btn--one {
   border-color: #0097e6;
   color: #0097e6;

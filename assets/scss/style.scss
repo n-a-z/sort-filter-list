@@ -59,6 +59,10 @@ $transition: all 1s;
 			color: $font-color-one;
 		}
 
+		&--active {
+			display: none;
+		}
+
 		&--one {
 			border-color: $color-two;
 			color: $color-two;
