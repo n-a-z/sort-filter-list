@@ -23,11 +23,23 @@ $color-one: #f1f1f1;
 	}
 
 	&__client {
-		margin-bottom: 1em;
-		padding: 1em;
-		background-color: $color-one;
+		// margin-bottom: 1em;
+		// padding: 1em;
+		// background-color: $color-one;
+	}
+	&__table-heading {
+    background-color: $color-one;
+    text-transform: uppercase;
+    padding: 0.5em 0 0.5em 0;
+	}
+	&__table-cell {
+    background-color: $color-one;
+    padding: 0.5em 0 0.5em 0;
+	}
+	&__table-row {
+
 	}
 	&__client-data {
-		list-style-type: none;
+		//list-style-type: none;
 	}
 }

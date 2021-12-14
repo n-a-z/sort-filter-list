@@ -13,13 +13,13 @@ function filterDouble() {
 		.value.toLowerCase();
 
 	let clientsList = document.getElementById('data');
-	let clientsUL = clientsList.querySelectorAll('ul.container__client-data');
-	let clientsULContainer = clientsList.querySelectorAll('li.container__client');
+	let clientsUL = clientsList.querySelectorAll('span.container__client-data');
+	let clientsULContainer = clientsList.querySelectorAll('tr.container__client');
 	let clientsLiCountry = clientsList.querySelectorAll(
-		'li.container_client-country'
+		'td.container__client-country'
 	);
 	let clientsLiIndustry = clientsList.querySelectorAll(
-		'li.container_client-industry'
+		'td.container__client-industry'
 	);
 
 	for (let i = 0; i < clientsUL.length; i++) {

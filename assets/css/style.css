@@ -29,13 +29,14 @@
   }
 }
 
-.container__client {
-  margin-bottom: 1em;
-  padding: 1em;
+.container__table-heading {
   background-color: #f1f1f1;
+  text-transform: uppercase;
+  padding: 0.5em 0 0.5em 0;
 }
 
-.container__client-data {
-  list-style-type: none;
+.container__table-cell {
+  background-color: #f1f1f1;
+  padding: 0.5em 0 0.5em 0;
 }
 /*# sourceMappingURL=style.css.map */
