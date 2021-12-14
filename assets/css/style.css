@@ -29,14 +29,7 @@
   }
 }
 
-.container__table-heading {
+.container .list__row:nth-of-type(even) {
   background-color: #f1f1f1;
-  text-transform: uppercase;
-  padding: 0.5em 0 0.5em 0;
-}
-
-.container__table-cell {
-  background-color: #f1f1f1;
-  padding: 0.5em 0 0.5em 0;
 }
 /*# sourceMappingURL=style.css.map */

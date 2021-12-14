@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Filtering and Sorting of Data</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -13,27 +13,31 @@
     <div class="container">
         <div class="container__row">
             <div class="container__col">
-                <div class="container__filters">Filters
-                    <input class="container__input" id="filterCountry" placeholder="Filter Countries">
-                    <input class="container__input" id="filterIndustry" placeholder="Filter Industries">
+                <div class="filter">Filters
+                    <input class="filter__input" id="filterCountry" placeholder="Filter Countries">
+                    <input class="filter__input" id="filterIndustry" placeholder="Filter Industries">
                 </div>
-                <div class="container__filters">Sort by Name
-                    <button class="container_sort" id="sortNameAsc">Asc</button>
-                    <button class="container_sort" id="sortNameDesc">Desc</button>
-                </div>
-                <div class="container__filters">Sort by No. of Employees
-                    <button class="container_sort" id="sortEmpAsc">Asc</button>
-                    <button class="container_sort" id="sortEmpDesc">Desc</button>
+                <div class="sort">
+                    <div class="sort__group">Sort by Name
+                        <button class="sort__btn" id="sortNameAsc">Asc</button>
+                        <button class="sort__btn" id="sortNameDesc">Desc</button>
+                    </div>
+                    <div class="sort__group">Sort by No. of Employees
+                        <button class="sort__btn" id="sortEmpAsc">Asc</button>
+                        <button class="sort__btn" id="sortEmpDesc">Desc</button>
+                    </div>
                 </div>
             </div>
             <div class="container__col">
-                <table class="container__list" id="data">
-                    <tr class="container__table-row">
-                        <th class="container__table-heading">Name</th>
-                        <th class="container__table-heading">Country</th>
-                        <th class="container__table-heading">Industry</th>
-                        <th class="container__table-heading">No. of Employees</th>
-                    </tr>
+                <table class="list">
+                    <tbody class="list__body" id="data">
+                        <tr class="list__row">
+                            <th class="list__heading">Name</th>
+                            <th class="list__heading">Country</th>
+                            <th class="list__heading">Industry</th>
+                            <th class="list__heading">No. of Employees</th>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>

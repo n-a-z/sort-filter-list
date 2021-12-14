@@ -13,16 +13,11 @@ function filterDouble() {
 		.value.toLowerCase();
 
 	let clientsList = document.getElementById('data');
-	let clientsUL = clientsList.querySelectorAll('span.container__client-data');
-	let clientsULContainer = clientsList.querySelectorAll('tr.container__client');
-	let clientsLiCountry = clientsList.querySelectorAll(
-		'td.container__client-country'
-	);
-	let clientsLiIndustry = clientsList.querySelectorAll(
-		'td.container__client-industry'
-	);
+	let clientsContainer = clientsList.querySelectorAll('tr.client');
+	let clientsLiCountry = clientsList.querySelectorAll('td.client__country');
+	let clientsLiIndustry = clientsList.querySelectorAll('td.client__industry');
 
-	for (let i = 0; i < clientsUL.length; i++) {
+	for (let i = 0; i < clientsContainer.length; i++) {
 		let spanCountry = clientsLiCountry[i].getElementsByTagName('span')[0];
 		let spanIndustry = clientsLiIndustry[i].getElementsByTagName('span')[0];
 
@@ -30,9 +25,9 @@ function filterDouble() {
 			spanCountry.innerHTML.toLowerCase().indexOf(filterValueCountry) > -1 &&
 			spanIndustry.innerHTML.toLowerCase().indexOf(filterValueIndustry) > -1
 		) {
-			clientsULContainer[i].style.display = '';
+			clientsContainer[i].style.display = '';
 		} else {
-			clientsULContainer[i].style.display = 'none';
+			clientsContainer[i].style.display = 'none';
 		}
 	}
 }

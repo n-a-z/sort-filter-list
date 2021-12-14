@@ -13,13 +13,11 @@ async function getData() {
 			const dataToHtml = data
 				.map((client) => {
 					return `
-					<tr class="container__client" id="clients">
-						<span class="container__client-data">
-							<td class="container__table-cell container__client-name><span class="container__client-value">${client.name}<span></td>
-							<td class="container__table-cell container__client-country"><span class="container__client-value">${client.country}<span></td>
-							<td class="container__table-cell container__client-industry"><span class="container__client-value">${client.industry}<span></td>
-							<td class="container__table-cell container__client-employees><span class="container__client-value">${client.numberOfEmployees}<span></td>
-						</span>
+					<tr class="list__row client">
+							<td class="list__cell client__name><span class="client__value">${client.name}<span></td>
+							<td class="list__cell client__country"><span class="client__value">${client.country}<span></td>
+							<td class="list__cell client__industry"><span class="client__value">${client.industry}<span></td>
+							<td class="list__cell client__employees"><span class="client__value">${client.numberOfEmployees}<span></td>
 					</tr>
 					`;
 				})
