@@ -21,6 +21,7 @@ $transition: all 1s;
 	}
 	&__col {
 		flex: 0 0 100%;
+		overflow-x: scroll;
 
 		@media (min-width: 768px) {
 			flex: 0 0 50%;
@@ -65,6 +66,12 @@ $transition: all 1s;
 		&--active {
 			background-position: 0 100%;
 			color: $font-color-one !important;
+		}
+
+		&--up-down {
+			&::after {
+				content: '\2193 \2191';
+			}
 		}
 
 		&--down {
