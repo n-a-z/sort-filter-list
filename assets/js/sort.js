@@ -23,19 +23,11 @@ function sortTableName(event) {
 
 			if (event.target.innerHTML === 'Asc') {
 				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-					sortNameAsc.classList.add('sort__btn--active');
-					sortNameDesc.classList.remove('sort__btn--active');
-					sortEmpAsc.classList.remove('sort__btn--active');
-					sortEmpDesc.classList.remove('sort__btn--active');
 					shouldSwitch = true;
 					break;
 				}
 			} else if (event.target.innerHTML === 'Desc') {
 				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-					sortNameAsc.classList.remove('sort__btn--active');
-					sortNameDesc.classList.add('sort__btn--active');
-					sortEmpAsc.classList.remove('sort__btn--active');
-					sortEmpDesc.classList.remove('sort__btn--active');
 					shouldSwitch = true;
 					break;
 				}
@@ -64,20 +56,12 @@ function sortTableEmp(event) {
 
 			if (event.target.innerHTML === 'Asc') {
 				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-					sortNameAsc.classList.remove('sort__btn--active');
-					sortNameDesc.classList.remove('sort__btn--active');
-					sortEmpAsc.classList.add('sort__btn--active');
-					sortEmpDesc.classList.remove('sort__btn--active');
 					shouldSwitch = true;
 					break;
 				}
 			} else if (event.target.innerHTML === 'Desc') {
 				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
 					shouldSwitch = true;
-					sortNameAsc.classList.remove('sort__btn--active');
-					sortNameDesc.classList.remove('sort__btn--active');
-					sortEmpAsc.classList.remove('sort__btn--active');
-					sortEmpDesc.classList.add('sort__btn--active');
 					break;
 				}
 			}

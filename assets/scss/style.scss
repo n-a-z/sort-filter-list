@@ -67,6 +67,18 @@ $transition: all 1s;
 			color: $font-color-one !important;
 		}
 
+		&--down {
+			&::after {
+				content: '\2193';
+			}
+		}
+
+		&--up {
+			&::after {
+				content: '\2191';
+			}
+		}
+
 		&--one {
 			border-color: $color-two;
 			color: $color-two;

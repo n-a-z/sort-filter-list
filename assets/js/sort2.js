@@ -13,7 +13,6 @@ function sortTable() {
 
 	document.querySelectorAll('.sort__btn').forEach((sort__btn) =>
 		sort__btn.addEventListener('click', () => {
-			sort__btn.classList.add('sort__btn--down');
 
 			document.querySelectorAll('th').forEach((th) => {
 				if (sort__btn.innerText.toLowerCase() === th.innerText.toLowerCase()) {

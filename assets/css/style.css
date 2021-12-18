@@ -75,6 +75,14 @@
   color: #fff !important;
 }
 
+.sort__btn--down::after {
+  content: '\2193';
+}
+
+.sort__btn--up::after {
+  content: '\2191';
+}
+
 .sort__btn--one {
   border-color: #0097e6;
   color: #0097e6;
