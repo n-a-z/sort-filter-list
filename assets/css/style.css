@@ -77,15 +77,15 @@
 }
 
 .sort__btn--up-down::after {
-  content: '\2193 \2191';
+  content: '\00A0\2193\2191';
 }
 
 .sort__btn--down::after {
-  content: '\2193';
+  content: '\00A0\2193';
 }
 
 .sort__btn--up::after {
-  content: '\2191';
+  content: '\00A0\2191';
 }
 
 .sort__btn--one {
