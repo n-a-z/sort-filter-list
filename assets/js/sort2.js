@@ -13,7 +13,7 @@ const getCellValue = (tr, idx) =>
 document.querySelectorAll('.sort__btn').forEach((sort__btn) =>
 	sort__btn.addEventListener('click', () => {
 		document.querySelectorAll('th').forEach((th) => {
-			if (sort__btn.innerText.toLowerCase() === th.innerText.toLowerCase()) {
+			if (camelize(sort__btn.innerText) === camelize(th.innerText)) {
 				const table = document.getElementById('data');
 
 				Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
