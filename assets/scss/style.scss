@@ -25,6 +25,7 @@ $transition: all 1s;
 
 		@media (min-width: 768px) {
 			flex: 0 0 50%;
+			overflow-x: visible;
 		}
 	}
 }
